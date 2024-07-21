@@ -276,7 +276,7 @@ const main = async () => {
 		sockets.startup(fastify.server)
 
 		try {
-			await fastify.listen(20001, '0.0.0.0')
+			await fastify.listen(8080, '0.0.0.0')
 			console.log("Web server started")
 		} catch (err) {
 			console.log("Error starting web server... exiting")

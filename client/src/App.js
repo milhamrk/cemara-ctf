@@ -34,7 +34,7 @@ const Admin = lazy(() => import("./AdminPanel/admin.js"));
 const Oops = lazy(() => import("./Misc/oops.js"));
 const UserChallengeCreate = lazy(() => import("./Misc/userChallengeCreate.js"));
 
-window.ipAddress = process.env.NODE_ENV === "development" ? "http://localhost:20001" : window.location.origin + "/api"
+window.ipAddress = process.env.NODE_ENV === "development" ? "http://localhost:8080" : window.location.origin + "/api"
 var ctfxVersion = "1.2"
 
 class App extends React.Component {
@@ -329,7 +329,7 @@ class App extends React.Component {
 
                         </Menu>
                         <div style={{ textAlign: "center", marginTop: "3ch", color: "#8c8c8c" }}>
-                          <p>Cemara Training Platform v{ctfxVersion} &copy; 202</p>
+                          <p>Cemara Training Platform v{ctfxVersion} &copy; 2024</p>
                         </div>
                       </div>
                     </Sider>

@@ -13,7 +13,7 @@ services:
     # image: "ghcr.io/matthew5025/ctf_platform_api:container-publish"
     container_name: "ctf-web-api"
     ports:
-      - "127.0.0.1:20001:20001"
+      - "127.0.0.1:8080:8080"
     depends_on: 
       - "ctf-mongodb"
     volumes:
@@ -25,7 +25,7 @@ services:
     # image: "ghcr.io/matthew5025/ctf_platform_client:container-publish"
     container_name: "ctf-web-client"
     ports: 
-      - 127.0.0.1:20002:20002
+      - 127.0.0.1:8888:8888
     depends_on: 
       - "ctf-web-api"
     volumes:
