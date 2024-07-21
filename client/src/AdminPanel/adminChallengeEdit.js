@@ -744,7 +744,6 @@ class AdminChallengeEdit extends React.Component {
                                 <Button type="primary" icon={<FlagOutlined />}>Submit</Button>
                             </div>
                             <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginTop: "2vh" }}>
-                                <p>Challenge Author: {this.state.challengeData.author}</p>
                                 <p style={{ color: "#d87a16", fontWeight: 500 }}>Attempts Remaining: {this.state.previewData.max_attempts}</p>
                             </div>
                         </TabPane>
