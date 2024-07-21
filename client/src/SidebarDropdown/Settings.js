@@ -86,16 +86,6 @@ class Settings extends React.Component {
                     </div>
                 ) : (
                     <div>
-                        <Modal
-                            title={"Delete Account"}
-                            visible={this.state.deleteAccountModal}
-                            footer={null}
-                            onCancel={() => { this.setState({ deleteAccountModal: false }) }}
-                            confirmLoading={this.state.modalLoading}
-                        >
-
-                            <DeleteAccountForm logout={this.props.logout.bind(this)} setState={this.setState.bind(this)} />
-                        </Modal>
 
 
                         <Divider />
