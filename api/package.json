@@ -1,0 +1,38 @@
+{
+  "name": "ctf_platform",
+  "version": "1.0.0",
+  "description": "A rewriting of a perfectly fine platform and a waste of time in general",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IRS-Cybersec/ctf_platform.git"
+  },
+  "author": "sheepymeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IRS-Cybersec/ctf_platform/issues"
+  },
+  "homepage": "https://github.com/IRS-Cybersec/ctf_platform",
+  "dependencies": {
+    "@fastify/cors": "^8.1.0",
+    "argon2": "^0.28.7",
+    "bson": "^4.6.4",
+    "dayjs": "^1.11.4",
+    "dompurify": "^2.4.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "fastify": "^4.10.2",
+    "fastify-file-upload": "^4.0.0",
+    "jsdom": "^20.0.3",
+    "mongodb": "^4.10.0",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^6.7.8",
+    "reallydangerous": "^2.1.0",
+    "sanitize-filename": "^1.6.3",
+    "sharp": "^0.30.7",
+    "ws": "^8.11.0"
+  }
+}
