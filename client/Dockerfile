@@ -27,7 +27,7 @@ COPY defaultCatPhoto.webp /usr/share/nginx/static/category/default.webp
 RUN useradd node
 RUN chown -R node /usr/share/nginx/static/
 
-EXPOSE 20005
+EXPOSE 8888
 # Containers run nginx with global directives and daemon off
 CMD ["nginx", "-g", "daemon off;"]
 
