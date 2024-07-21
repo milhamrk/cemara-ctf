@@ -58,7 +58,6 @@ class Home extends React.Component {
 
       <Layout className="layout-style">
         <h2>Welcome to the Cemara Training Platform!</h2>
-        <h3>This platform is in early alpha. Do report any bugs you find :D!</h3>
         <Divider />
         <div style={{ display: "flex", alignItems: "center" }}>
           <h1 style={{ fontSize: "150%", marginRight: "1ch" }}>Announcements <NotificationTwoTone /></h1> {this.state.updatingIndicator && (<div style={{ display: "flex", alignItems: "center" }}><Ellipsis color="#177ddc" size={50} /> <h4> Checking for updates</h4></div>)}
