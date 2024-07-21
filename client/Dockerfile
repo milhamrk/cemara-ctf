@@ -1,33 +1,23 @@
-# Stage 1
-FROM node:16.18-bullseye AS builder
-WORKDIR /usr/src/app
-COPY package*.json ./
+server {
+    listen 0.0.0.0:8888;
+    server_name localhost;
 
-RUN npm ci --only=production
-COPY . .
-# Reduces the (frankly insane) amount of RAM this build takes
-ENV GENERATE_SOURCEMAP=false
-RUN npm run build
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+        try_files $uri /index.html;
+    }
 
-# Stage 2
-#pull the latest (stable) nginx base image
-FROM nginx:stable
-#copies React to the container directory
-# Set working directory to nginx resources directory
-WORKDIR /usr/share/nginx/html
-#Remove default nginx static resources
-RUN rm -rf ./*
-# Copies static resources from builder stage
-COPY --from=builder /usr/src/app/build .
-COPY nginx.conf /etc/nginx/nginx.conf
+    location /static/profile/ {
+        alias /usr/share/nginx/static/profile/;
+    }
 
-COPY default.webp /usr/share/nginx/static/profile/default.webp 
-COPY defaultCatPhoto.webp /usr/share/nginx/static/category/default.webp 
+    location /static/category/ {
+        alias /usr/share/nginx/static/category/;
+    }
 
-RUN useradd node
-RUN chown -R node /usr/share/nginx/static/
-
-EXPOSE 8888
-# Containers run nginx with global directives and daemon off
-CMD ["nginx", "-g", "daemon off;"]
-
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
