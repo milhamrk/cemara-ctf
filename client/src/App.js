@@ -346,7 +346,7 @@ class App extends React.Component {
                             enter={{ opacity: 1 }}
                             leave={{ opacity: 0, display: "none" }}>
                             {(style, loc) => (
-                              <animated.div style={{ ...style, height: "95vh", overflowY: "auto", backgroundColor: "rgba(0, 0, 0, 0.7)", border: "5px solid transparent", borderRadius: "20px" }}>
+                              <animated.div style={{ ...style, height: "95vh", overflowY: "auto", backgroundColor: "rgba(0, 0, 0, 0.9)", border: "5px solid transparent", borderRadius: "7px" }}>
                                 <Suspense fallback={<div style={{ height: "100%", width: "100%", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 15 }}>
                                   <Ellipsis color="#177ddc" size={120} ></Ellipsis>
                                 </div>}>
