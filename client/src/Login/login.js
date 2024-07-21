@@ -377,14 +377,12 @@ class Login extends React.Component {
                                                 <Checkbox>Remember me</Checkbox>
                                             </Form.Item>
 
-                                            <a href="#" id="forgot-password" onClick={() => { this.setState({ login: false, forgotPass: true }) }}><b>I forgot my password <QuestionCircleOutlined /></b></a>
                                         </div>
                                     </Form.Item>
 
                                     <Form.Item>
                                         <div style={{ display: "flex", alignItems: "center" }}>
                                             <Button type="primary" htmlType="submit" className="login-form-button" style={{ marginRight: "2ch" }} loading={this.state.loading}>Log in</Button>
-                                            <span>Or <a href="#" id="register-toggle" onClick={() => { this.setState({ login: false, register: true }) }} ><b>Register now <RightCircleOutlined /></b></a></span>
                                         </div>
                                     </Form.Item>
                                 </Form>
