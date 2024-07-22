@@ -629,7 +629,6 @@ class ChallengesTagSort extends React.Component {
                 <SubmitFlagForm submitFlag={this.submitFlag.bind(this)} currentChallengeStatus={this.state.currentChallengeStatus} currentChallengeSolved={this.state.currentChallengeSolved}></SubmitFlagForm>
               </div>
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", marginTop: "-1vh" }}>
-                <p>Challenge Author: <em>{this.state.viewingChallengeDetails.author}</em></p>
                 <p style={{ color: "#d87a16", fontWeight: 500 }}>Attempts Remaining: {this.state.viewingChallengeDetails.max_attempts}</p>
               </div>
             </TabPane>
