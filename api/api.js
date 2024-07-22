@@ -54,7 +54,7 @@ const startCache = async () => {
 		emailVerify: false,
 		teamChangeDisable: false,
 		loginDisable: false,
-		categoryList: ["Secondary School", "JC/Poly/ITE"],
+		categoryList: ["Cemara Team", "Individual"],
 		latestUserCategoryUpdateID: 0,
 		categorySwitchDisable: false,
 		disableNonCatFB: false

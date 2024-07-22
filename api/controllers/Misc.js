@@ -35,7 +35,7 @@ let cache = {
     emailVerify: false,
     teamChangeDisable: false,
     loginDisable: false,
-    categoryList: ["Secondary School", "JC/Poly/ITE"],
+    categoryList: ["Cemara Team", "Individual"],
     categorySwitchDisable: false,
     disableNonCatFB: false
 }
