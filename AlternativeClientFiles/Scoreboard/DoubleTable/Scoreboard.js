@@ -600,7 +600,7 @@ class Scoreboard extends React.Component {
                 render={(text, row, index) => {
                   if (row.isTeam) {
                     return (
-                      <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, display: "flex", alignItems: "center" }}>
+                      <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, textTransform: "uppercase", textTransform: "uppercase", display: "flex", alignItems: "center" }}>
                         <Avatar.Group
                           maxCount={3}
                           maxStyle={{ marginRight: "1ch" }}
@@ -659,7 +659,7 @@ class Scoreboard extends React.Component {
                   render={(text, row, index) => {
                     if (row.isTeam) {
                       return (
-                        <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, display: "flex", alignItems: "center" }}>
+                        <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, textTransform: "uppercase", display: "flex", alignItems: "center" }}>
                           <Avatar.Group
                             maxCount={3}
                             maxStyle={{ marginRight: "1ch" }}
@@ -698,7 +698,7 @@ class Scoreboard extends React.Component {
                   render={(text, row, index) => {
                     if (row.isTeam) {
                       return (
-                        <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, display: "flex", alignItems: "center" }}>
+                        <Link to={"/Team/" + text}><a style={{ fontSize: "110%", fontWeight: 700, textTransform: "uppercase", display: "flex", alignItems: "center" }}>
                           <Avatar.Group
                             maxCount={3}
                             maxStyle={{ marginRight: "1ch" }}
