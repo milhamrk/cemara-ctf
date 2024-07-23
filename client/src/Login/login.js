@@ -329,13 +329,13 @@ class Login extends React.Component {
         return (
 
             <Layout style={{ maxWidth: "100vw", maxHeight: "100vh" }}>
-                <Content style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0)", backgroundImage: "url(" + require("./../assets/mainBG.webp").default + ")" }}>
+                <Content style={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0)", backgroundSize: "cover", backgroundImage: "url(" + require("./../assets/mainBG.webp").default + ")" }}>
                     <div className="login-banner login-banner-responsive">
                         <div style={{ fontSize: "7ch", color: "#595959" }}>
-                            <span style={{ fontWeight: "500", textShadow: '1px -1px 1px -1px #000000' }}>Cemara Training Platform</span>
+                            
                         </div>
                         <div style={{ color: "#595959", fontSize: "5ch" }}>
-                            <p style={{ textShadow: '1px 1px 1px 1px #000000' }}>The Wheel. Reinvented.™</p>
+                            
                         </div>
                     </div>
 
