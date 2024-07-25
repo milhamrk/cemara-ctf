@@ -131,7 +131,7 @@ class Scoreboard extends React.Component {
   connectWebSocket() {
     if (this.state.isEnabled) {
       const proto = window.location.protocol === "http:" ? "ws:" : "ws:";
-      const address = process.env.NODE_ENV === "development" ? "ws://localhost:8080/" : proto + "//" + "103.139.192.83:8888" + "/api/";
+      const address = process.env.NODE_ENV === "development" ? "ws://localhost:8080/" : proto + "//" + "ctf.cemara.one" + "/api/";
       let webSocket = new WebSocket(address);
       webSocket.onmessage = (e) => {
         let data = JSON.parse(e.data);
@@ -546,10 +546,7 @@ class Scoreboard extends React.Component {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              {this.state.liveUpdates ?
-                <div style={{ display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-end" }}><h4>Live Scoreboard </h4> <Ripple color="#a61d24" size={40} /></div> :
-                <div style={{ display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-end" }}><h4>Connecting Live Scoreboard </h4> <Ellipsis color="#177ddc" size={40} /></div>
-              }
+              
               <div style={{ display: "flex", alignContent: "center" }}>
                 <h1><ApartmentOutlined /> Category: </h1>
                 <Select loading={this.state.loadingGraph || this.state.loadingTable} defaultValue="none" style={{ width: "20ch", backgroundColor: "#1f1f1f", marginLeft: "1ch" }} onChange={(value) => { this.handleCategoryChange(value) }}>
