@@ -5,6 +5,9 @@ services:
     container_name: "ctf-mongodb"
     ports: 
       - "0.0.0.0:27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
     volumes: 
       - db_data:/data/db
   ctf-web-api:
