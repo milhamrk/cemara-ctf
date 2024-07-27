@@ -5,10 +5,10 @@ class Connection {
     static async open() {
 
         if (this.db) return true
-        const status = await mongoDB.MongoClient.connect("mongodb://ctf-mongodb:27017", {
+        const status = await mongoDB.MongoClient.connect("mongodb://admin:secret@ctf-mongodb:27017", {
             useNewUrlParser: true,
             useUnifiedTopology: true
-        }).then(async (client) => {
+          }).then(async (client) => {
             const db = client.db('ctf')
             const collections = {
                 users: db.collection('users'),

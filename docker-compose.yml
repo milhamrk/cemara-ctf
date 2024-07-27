@@ -4,37 +4,50 @@ services:
     image: "mongo"
     container_name: "ctf-mongodb"
     ports: 
-      - "0.0.0.0:27017:27017"
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
     volumes: 
       - db_data:/data/db
+    networks:
+      - ctf_platform_network
+
   ctf-web-api:
     build:
       context: ./api
     # image: "ghcr.io/matthew5025/ctf_platform_api:container-publish"
     container_name: "ctf-web-api"
     ports:
-      - "0.0.0.0:8080:8080"
+      - "8080:8080"
     depends_on: 
       - "ctf-mongodb"
     volumes:
       - profile_files:/usr/share/nginx/static/profile
       - category_files:/usr/share/nginx/static/category
+    networks:
+      - ctf_platform_network
+
   ctf-web-client:
     build:
       context: ./client
     # image: "ghcr.io/matthew5025/ctf_platform_client:container-publish"
     container_name: "ctf-web-client"
     ports: 
-      - 0.0.0.0:8888:8888
+      - "8888:8888"
     depends_on: 
       - "ctf-web-api"
     volumes:
       - profile_files:/usr/share/nginx/static/profile
       - category_files:/usr/share/nginx/static/category
+    networks:
+      - ctf_platform_network
+
 volumes:
-    profile_files:
-    category_files:
-    db_data:
+  profile_files:
+  category_files:
+  db_data:
+
 networks:
-  default:
-    name: ctf_platform_network
+  ctf_platform_network:
+    driver: bridge
